@@ -1,0 +1,23 @@
+<script type="text/html" id="myshop">
+	<%for(var n in shopdata.shop_data){%>
+		<div class="items clearfix">
+			<div class="itemsImg">
+				<a href=""><img src= <%=shopdata.shop_data[n].shop_ico%> alt=""></a>
+			</div>
+			<div class="itemsCtn">
+				<h3><a href="" class="sheng1"><%=shopdata.shop_data[n].shop_name%></a><span>店铺等级:</span><a title= <%=shopdata.shop_data[n].level%>级 class="levelStar" href = "##"></a></h3>
+				<p class="sheng">主营：<%=shopdata.shop_data[n].main%></p>
+				<p class="sheng" title= <%=shopdata.shop_data[n].addr%> >地址：<%=shopdata.shop_data[n].addr%></p>
+			</div>
+			<div class="itemsCheck">
+				<p>先行陪护</p>
+				<p>同城帮认证</p>
+				<p>人气:<%=shopdata.shop_data[n].shop_visit%>次浏览</p>
+			</div>
+			<div class="comeshop">
+				<a href="">进入店铺</a>
+			</div>
+		</div>
+	<%}%>
+
+</script>

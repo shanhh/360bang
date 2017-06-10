@@ -1,0 +1,22 @@
+<!-- 获得各个区县的数据 -->
+<script type = "text/html" id = "cityBList">
+	<%for(var i in listCityData.result.citylist){%>
+		<p class="myp">
+			<%for(var j = 0; j < listCityData.result.citylist[i].length; j++){%>
+				<a href="#" code = <%= listCityData.result.citylist[i][j].code %> ><%= listCityData.result.citylist[i][j].name%></a>
+			<%}%> 
+		</p>
+	<%}%>
+</script>
+<!-- 获取城市字母 -->
+<script type="text/html" id="cityCode">
+	<%for(var n in listItem.result.citylist){%>
+		<a href="#"><%= n %></a>
+	<%}%>
+</script>
+<!-- 获取热门城市 -->
+<script type="text/html" id="cityBHot">
+	<%for(var n in listCity12.result.hotcity){%>
+		<a href="#" code= <%= listCity12.result.hotcity[n].code %> ><%= listCity12.result.hotcity[n].name %></a>
+	<%}%>
+</script>

@@ -1,0 +1,33 @@
+
+<!-- 二级菜单第二个菜单的头部数据加载 -->
+<script type="text/html" id="ercaiTable2top">
+	<%for(var n = 0; n < listcai2.result.hot.length; n++){%>
+		<a><%= listcai2.result.hot[n].name%></a>
+	<%}%>
+</script>
+<!-- 二级菜单第二个菜单的尾部数据加载 -->
+<script type="text/html" id="ercaiTable2bottom">
+	<%for(var n = 0; n < listcai2.result.other.length; n++){%>
+		<a><%= listcai2.result.other[n].name%></a>
+	<%}%>
+</script>
+<!-- 二级菜单第一个数据的搭建 -->
+<script type="text/html" id="ercaiTable">
+	<%for(var n in listcai1.result){%>
+		<div class="pingMain clearfix">
+			<div class="ping">
+				<%= listcai1.result[n].name %>
+				<span> &gt; </span>
+			</div>
+			<div class="pingCtn">
+				<%for(var i in listcai1.result[n].list){%>
+					<a href="#"><%= listcai1.result[n].list[i].name %></a>
+				<%}%>
+			</div>	
+		</div>
+
+	<%}%>
+
+
+
+</script>
